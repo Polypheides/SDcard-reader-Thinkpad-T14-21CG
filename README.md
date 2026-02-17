@@ -6,7 +6,7 @@
 
 This project provides **Gerber** files for an internal SD card reader daughterboard designed for the **ThinkPad T14 (Gen 3/21CG)**. It is designed to replace the original right-side single USB daughterboard.
 
-### Key Technical Specs (Rev. 5)
+### Key Technical Specs (Rev. 7)
 
 **Controller:**
 * GL823K USB 2.0 SD Card Reader.
