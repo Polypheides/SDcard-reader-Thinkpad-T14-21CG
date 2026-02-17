@@ -1,3 +1,5 @@
+The information in this file is obsolete.
+
 24.011
 24.12
 
