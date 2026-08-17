@@ -1,28 +1,31 @@
-# ⚠️ Disclaimer: This PCB is TESTED with ISSUES ⚠️
+# ⚠️ Disclaimer: Rev. 7 PCB Tested with Known Issues ⚠️
 
-**Use at your own risk.** This is an experimental project and has not yet been verified in physical hardware.
+**Use at your own risk.** This is an experimental project. Rev. 7 has been hardware-verified to work, but requires a botch wire fix.
+
+![Rev. 7 Botch Wire](Misc/Images/Rev.%207%20Botch%20Wire.jpg)
+
+---
 
 ## Project Overview
 
-This project provides **Gerber** files for an internal SD card reader daughterboard designed for the **ThinkPad T14 (Gen 3/21CG)**. It is designed to replace the original right-side single USB daughterboard.
+This repository provides **Gerber files** for an internal MicroSD card reader daughterboard designed for the **ThinkPad T14 (Gen 3 / 21CG)**. It replaces the stock right-side single USB daughterboard.
 
-### Key Technical Specs (Rev. 7)
+### Technical Specifications
 
-**Controller:**
-* GL823K USB 2.0 SD Card Reader.
+* **Controller:** Genesys Logic **GL823K** (USB 2.0 MicroSD Card Reader Controller).
+* **ESD Protection:** **USBLC6-2SC6** monolithic ESD protection array.
+  * **Data Integrity:** Ultra-low line capacitance ($1\text{ pF}$) prevents signal degradation on USB 2.0 differential pairs ($D+/D-$).
+  * **Line Coverage:** Dedicated ESD clamping for data, clock, and command lines.
+  * **Rail-to-Rail Clamping:** Suppresses high-voltage electrostatic discharge before transients reach the controller or internal hub.
 
-**Protection:**
-* **USBLC6-2SC6** monolithic ESD protection device.
-* **High-Speed Data Integrity:** Features a very low capacitance of $1\text{ pF}$, ensuring that the USB 2.0 differential signals ($D+/D-$) remain crisp and within specification.
-* **Comprehensive Protection:** Provides ESD protection for Data- Clock- and Command-signals.
-* **Rail-to-Rail Protection:** Effectively clamps high-voltage spikes from static electricity before they reach the **GL823K** controller or the ThinkPad's internal Hub.
+* **Interface:** 20-pin FPC / board-to-board connector (`CON1`).
+* **PCB Thickness:** Recommended **1.0 mm** for proper chassis clearance and alignment.
 
+> **Revision Note (Rev. 8):** Integrates the missing trace fix from Rev. 7 (eliminating the need for a jumper wire) and adds additional decoupling capacitors for power rail stability.
 
-**Other:**
-* **Interface:** Custom 20-pin FPC/Board-to-board connector (CON1).
-* **Manufacturing Note:** Recommended PCB thickness is **1.0 mm** for correct chassis fitment.
+---
 
-### Installation Notes
+## Installation & Fitment Notes
 
-* **Chassis Modding:** Physical filing of the laptop's plastic/magnesium frame may be required as the SD slot is wider than the original USB-A opening.
-* **Orientation:** Pin 1 on the PCB must match Pin 1 on the motherboard connector.
+* **Chassis Modification:** Physical filing or trimming of the laptop's plastic/magnesium subframe should not be required.
+* **Connector Orientation:** Ensure **Pin 1** on the daughterboard aligns with **Pin 1** on the motherboard connector before applying power.
