@@ -1,4 +1,4 @@
-# ⚠️ Disclaimer: This PCB is UNTESTED ⚠️
+# ⚠️ Disclaimer: This PCB is TESTED with ISSUES ⚠️
 
 **Use at your own risk.** This is an experimental project and has not yet been verified in physical hardware.
 
